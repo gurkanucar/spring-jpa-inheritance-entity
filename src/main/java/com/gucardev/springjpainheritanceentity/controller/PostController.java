@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/posts")
+@RequestMapping("/post")
 public class PostController {
   private final PostService postService;
 
@@ -21,9 +21,9 @@ public class PostController {
     this.postService = postService;
   }
 
+
   @GetMapping
-  public ResponseEntity<?> get(@RequestParam(required = false) PostType postType) {
-    if (postType == null) postType = PostType.TEXT;
+  public ResponseEntity<Object> get(@RequestParam(required = false) PostType postType) {
     return ResponseEntity.ok(postService.getPostsByType(postType));
   }
 
