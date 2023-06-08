@@ -1,4 +1,4 @@
-package com.gucardev.springjpainheritanceentity.factory;
+package com.gucardev.springjpainheritanceentity.factory.post.create;
 
 import com.gucardev.springjpainheritanceentity.dto.PostDTO;
 import com.gucardev.springjpainheritanceentity.model.Post;
@@ -9,7 +9,7 @@ public class TextPostFactory implements PostFactory {
   @Override
   public Post createPost(PostDTO postDto) {
     TextPost post = new TextPost();
-    post.setText(postDto.getText());
+    post.setContent(postDto.getContent());
     return post;
   }
 }

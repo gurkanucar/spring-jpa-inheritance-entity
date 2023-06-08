@@ -1,4 +1,4 @@
-package com.gucardev.springjpainheritanceentity.factory;
+package com.gucardev.springjpainheritanceentity.factory.post.create;
 
 import com.gucardev.springjpainheritanceentity.dto.PostDTO;
 import com.gucardev.springjpainheritanceentity.model.Post;

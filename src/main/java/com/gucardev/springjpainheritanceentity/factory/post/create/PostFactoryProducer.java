@@ -1,4 +1,4 @@
-package com.gucardev.springjpainheritanceentity.factory;
+package com.gucardev.springjpainheritanceentity.factory.post.create;
 
 import com.gucardev.springjpainheritanceentity.enumeration.PostType;
 
