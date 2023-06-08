@@ -7,6 +7,7 @@ import com.gucardev.springjpainheritanceentity.service.PostService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,6 +26,12 @@ public class PostController {
   @GetMapping
   public ResponseEntity<Object> get(@RequestParam(required = false) PostType postType) {
     return ResponseEntity.ok(postService.getPostsByType(postType));
+  }
+
+  @PutMapping
+  public ResponseEntity<Post> updatePost(@RequestBody PostDTO postDto) {
+    Post post = postService.updatePost(postDto);
+    return ResponseEntity.ok(post);
   }
 
   @PostMapping
