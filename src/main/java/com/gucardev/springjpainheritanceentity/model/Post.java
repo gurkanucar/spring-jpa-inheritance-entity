@@ -24,6 +24,8 @@ public abstract class Post extends BaseEntity {
   @JsonBackReference
   private User user;
 
+  private String content;
+
   @OneToMany(mappedBy = "post")
   private List<Comment> comments;
 

@@ -11,5 +11,5 @@ import javax.persistence.PrimaryKeyJoinColumn;
 @PrimaryKeyJoinColumn(name = "post_id")
 @Getter @Setter
 public class TextPost extends Post {
-  private String text;
+
 }
