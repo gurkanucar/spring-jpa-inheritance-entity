@@ -1,12 +1,15 @@
 package com.gucardev.springjpainheritanceentity.factory.post.create;
 
 import com.gucardev.springjpainheritanceentity.dto.PostDTO;
+import com.gucardev.springjpainheritanceentity.enumeration.PostType;
 import com.gucardev.springjpainheritanceentity.model.PollAnswer;
 import com.gucardev.springjpainheritanceentity.model.PollPost;
 import com.gucardev.springjpainheritanceentity.model.Post;
 import java.util.List;
 import java.util.stream.Collectors;
+import org.springframework.stereotype.Component;
 
+@Component
 public class PollPostFactory implements PostFactory {
 
   @Override
@@ -25,5 +28,10 @@ public class PollPostFactory implements PostFactory {
     post.setPollAnswers(pollAnswers);
     post.setContent(postDto.getContent());
     return post;
+  }
+
+  @Override
+  public PostType getPostType() {
+    return PostType.POLL;
   }
 }

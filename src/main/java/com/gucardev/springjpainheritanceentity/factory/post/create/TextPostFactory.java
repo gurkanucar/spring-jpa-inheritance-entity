@@ -1,9 +1,12 @@
 package com.gucardev.springjpainheritanceentity.factory.post.create;
 
 import com.gucardev.springjpainheritanceentity.dto.PostDTO;
+import com.gucardev.springjpainheritanceentity.enumeration.PostType;
 import com.gucardev.springjpainheritanceentity.model.Post;
 import com.gucardev.springjpainheritanceentity.model.TextPost;
+import org.springframework.stereotype.Component;
 
+@Component
 public class TextPostFactory implements PostFactory {
 
   @Override
@@ -11,5 +14,10 @@ public class TextPostFactory implements PostFactory {
     TextPost post = new TextPost();
     post.setContent(postDto.getContent());
     return post;
+  }
+
+  @Override
+  public PostType getPostType() {
+    return PostType.TEXT;
   }
 }
