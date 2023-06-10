@@ -23,6 +23,7 @@ public class PollPostFactory implements PostFactory {
                 })
             .collect(Collectors.toList());
     post.setPollAnswers(pollAnswers);
+    post.setContent(postDto.getContent());
     return post;
   }
 }

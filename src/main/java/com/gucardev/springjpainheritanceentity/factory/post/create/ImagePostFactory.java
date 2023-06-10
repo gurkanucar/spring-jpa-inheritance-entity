@@ -10,6 +10,7 @@ public class ImagePostFactory implements PostFactory {
   public Post createPost(PostDTO postDto) {
     ImagePost post = new ImagePost();
     post.setImageUrl(postDto.getImageUrl());
+    post.setContent(postDto.getContent());
     return post;
   }
 }
