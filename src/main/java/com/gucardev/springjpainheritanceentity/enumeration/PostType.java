@@ -4,6 +4,12 @@ public enum PostType {
   TEXT,
   IMAGE,
   VIDEO,
-  POLL
-}
+  POLL;
 
+  public static PostType getEnumByString(String str) {
+    for (PostType type : PostType.values()) {
+      if (type.name().equalsIgnoreCase(str)) return type;
+    }
+    throw new IllegalArgumentException("Not found with text " + str);
+  }
+}

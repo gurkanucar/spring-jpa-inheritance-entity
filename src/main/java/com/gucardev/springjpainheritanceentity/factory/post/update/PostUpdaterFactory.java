@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public class PostUpdaterFactory {
   private final Map<String, PostUpdater> updaterMap;
 
