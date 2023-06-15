@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component(PostType.POLL_FACTORY_NAME)
 public class PollPostFactory implements PostFactory {
 
   @Override
@@ -28,10 +28,5 @@ public class PollPostFactory implements PostFactory {
     post.setPollAnswers(pollAnswers);
     post.setContent(postDto.getContent());
     return post;
-  }
-
-  @Override
-  public PostType getPostType() {
-    return PostType.POLL;
   }
 }

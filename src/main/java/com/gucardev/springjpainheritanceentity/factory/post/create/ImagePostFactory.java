@@ -6,7 +6,7 @@ import com.gucardev.springjpainheritanceentity.model.ImagePost;
 import com.gucardev.springjpainheritanceentity.model.Post;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component(PostType.IMAGE_FACTORY_NAME)
 public class ImagePostFactory implements PostFactory {
 
   @Override
@@ -15,10 +15,5 @@ public class ImagePostFactory implements PostFactory {
     post.setImageUrl(postDto.getImageUrl());
     post.setContent(postDto.getContent());
     return post;
-  }
-
-  @Override
-  public PostType getPostType() {
-    return PostType.IMAGE;
   }
 }

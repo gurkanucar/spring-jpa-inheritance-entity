@@ -6,7 +6,7 @@ import com.gucardev.springjpainheritanceentity.model.Post;
 import com.gucardev.springjpainheritanceentity.model.TextPost;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component(PostType.TEXT_FACTORY_NAME)
 public class TextPostFactory implements PostFactory {
 
   @Override
@@ -14,10 +14,5 @@ public class TextPostFactory implements PostFactory {
     TextPost post = new TextPost();
     post.setContent(postDto.getContent());
     return post;
-  }
-
-  @Override
-  public PostType getPostType() {
-    return PostType.TEXT;
   }
 }
